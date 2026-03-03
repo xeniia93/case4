@@ -1,111 +1,120 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+ /* ===== БАЗА ===== */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* ===== ТЕМА ===== */
+
 .light {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+  color: #1a1a1a;
   min-height: 100vh;
   transition: 0.3s;
 }
 
 .dark {
-  background-color: #1e1e1e;
-  color: white;
+  background-color: #121212;
+  color: #f5f5f5;
   min-height: 100vh;
   transition: 0.3s;
 }
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+/* ===== HEADER ===== */
+
+header {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+/* ===== HOME ===== */
+
+.home {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  width: 100vw;
-  height: 100vh;
+.home h1 {
+  font-size: 48px;
+  margin: 0;
 }
+
+.home-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* ===== КНОПКИ ===== */
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: white;
+  transition: all 0.3s ease;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
+/* ===== СТРАНИЦЫ ===== */
 
-.hero {
+.page {
+  padding: 100px 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
-  padding: 60px 20px;
 }
+
+/* ===== ФОРМА ===== */
 
 .form {
   max-width: 400px;
-  margin: 40px auto;
+  margin: 40px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .form input {
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-.form button {
-  padding: 12px;
-  border-radius: 8px;
-  background: black;
-  color: white;
-  cursor: pointer;
+.form span {
+  color: #ff4d4f;
+  font-size: 12px;
 }
+
+/* ===== СЛАЙДЕР ===== */
 
 .slider {
   overflow: hidden;
   width: 100%;
   max-width: 900px;
   margin: 40px auto;
+  border-radius: 20px;
 }
 
 .slides {
@@ -116,68 +125,28 @@ body {
 .slides img {
   width: 100%;
   flex-shrink: 0;
+  border-radius: 20px;
 }
+
+/* ===== DOTS ===== */
 
 .dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: gray;
-  margin: 5px;
+  width: 12px;
+  height: 12px;
+  background: #bbb;
+  margin: 6px;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.dot.active {
-  background: black;
-}
-
-.home {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.home-buttons {
-  display: flex;
-  gap: 20px;
-}
-
-button {
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
   transition: 0.3s;
 }
 
-button:hover {
-  transform: scale(1.05);
-}
-
-.page {
-  padding: 40px;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.dot.active {
+  background: #4f46e5;
+  transform: scale(1.2);
 }
