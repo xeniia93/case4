@@ -1,5 +1,3 @@
- /* ===== БАЗА ===== */
-
 * {
   box-sizing: border-box;
 }
@@ -8,8 +6,6 @@ body {
   margin: 0;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
-/* ===== ТЕМА ===== */
 
 .light {
   background-color: #ffffff;
@@ -25,16 +21,12 @@ body {
   transition: 0.3s;
 }
 
-/* ===== HEADER ===== */
-
 header {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 10;
 }
-
-/* ===== HOME ===== */
 
 .home {
   min-height: 100vh;
@@ -57,8 +49,6 @@ header {
   gap: 20px;
 }
 
-/* ===== КНОПКИ ===== */
-
 button {
   padding: 12px 24px;
   border-radius: 10px;
@@ -66,7 +56,7 @@ button {
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  background: linear-gradient(135deg, #382eeb, #f2e5ff);
   color: white;
   transition: all 0.3s ease;
 }
@@ -76,16 +66,12 @@ button:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== СТРАНИЦЫ ===== */
-
 .page {
   padding: 100px 20px 60px;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
-
-/* ===== ФОРМА ===== */
 
 .form {
   max-width: 400px;
@@ -106,8 +92,6 @@ button:hover {
   color: #ff4d4f;
   font-size: 12px;
 }
-
-/* ===== СЛАЙДЕР ===== */
 
 .slider {
   overflow: hidden;
